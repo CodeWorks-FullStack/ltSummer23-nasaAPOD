@@ -1,0 +1,36 @@
+/* BASIC STYLES HERE */
+
+body {
+    background-position: center;
+    background-size: cover;
+}
+
+#activeApod {
+    min-height: 85vh;
+}
+
+.apod-wrapper {}
+
+.apod-body {
+    visibility: hidden;
+    opacity: 0;
+    transition: ease 1s;
+
+    backdrop-filter: blur(20px);
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: .5em;
+    background-color: rgba(22, 19, 28, 0.59);
+}
+
+.apod-header {
+    cursor: pointer;
+}
+
+
+/* NOTE this '+' selector only works when these two classes are on sibling elements */
+/* NOTE 'sibling elements'  meaning they must be directly next to ea. other in the HTML*/
+.apod-header:hover+.apod-body {
+    visibility: visible;
+    opacity: 1;
+}
